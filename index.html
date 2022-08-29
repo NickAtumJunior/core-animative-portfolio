@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|DesignFreaker|</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Rubik+Maze&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(232, 59, 59);
+
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+html{
+    scroll-behavior: smooth;
+    transition: all 2s;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: rgba(203, 168, 168, 0);
+}
+
+header nav ul li:nth-child(1) {
+    margin-left: -16px;
+}
+
+header nav ul li:nth-child(2) {
+    margin-right: 40px;
+    padding-top: 5px;
+}
+
+header nav ul li:nth-child(3) {
+    margin-right: 40px;
+    padding-top: 5px;
+}
+
+header nav ul li:nth-child(4) {
+    margin-right: 40px;
+    padding-top: 5px;
+}
+
+header nav ul li:nth-child(5) {
+    margin-right: 40px;
+    padding-top: 5px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(232, 59, 59);
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.home {
+    width: 100vw;
+
+}
+
+.home-main {
+    width: 100vw;
+    height: 99vh;
+    background-image: repeating-linear-gradient(45deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 10px, transparent 10px, transparent 11px), repeating-linear-gradient(135deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 10px, transparent 10px, transparent 11px), linear-gradient(90deg, hsl(256, 7%, 84%), hsl(256, 7%, 84%));
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.home-left {
+    padding-top: 25%;
+    padding-left: 6%;
+}
+
+.home-left h1 {
+    font-family: 'Rubik Maze', cursive;
+    color: rgb(232, 59, 59);
+    font-size: 53px;
+    margin-bottom: 2%;
+}
+
+.home-left h2 {
+    font-family: 'Rubik Maze', cursive;
+    color: rgb(232, 59, 59);
+    font-size: 45px;
+    margin-bottom: 2%;
+}
+
+.home-left h5 {
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(140, 133, 133);
+    font-size: 25px;
+    font-weight: 100;
+    padding: 2%;
+    background-color: rgba(225, 241, 241, 0.221);
+    width: fit-content;
+    margin-bottom: 2%;
+}
+
+.home-left p {
+    font-family: 'Quicksand', sans-serif;
+    margin: 2%;
+
+}
+
+.home-left button {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    padding: 5px 16px 5px 16px;
+    margin-left: 1%;
+    margin-top: 3%;
+    background-color: transparent;
+    border: 0.1px solid #ded1d1;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 1.5s;
+    box-shadow: 2px 2px 2px  #bda5a5;
+}
+
+.home-left button:hover {
+    background-color: rgb(232, 59, 59);
+    color: white;
+    border: 0.1px solid rgb(232, 59, 59);
+}
+
+.home-left button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.home-right {
+    padding: 10%;
+}
+
+.home-right img {
+    padding-top: 10%;
+    filter: drop-shadow(3px 3px 40px #ff0800);
+}
+
+.services {
+    width: 100vw;
+    height: 100vh;
+   
+}
+
+.services h1 {
+    font-family: 'Rubik Maze', cursive;
+    color: rgb(232, 59, 59);
+    font-size: 36px;
+    padding-top: 1%;
+  
+}
+
+/*       
+.animate__animated.animate__bounce {
+    animation-iteration-count: infinite;
+    padding-top: -5%;
+}
+#scroll{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(232, 59, 59);
+} */
+
+.service-wrapper {
+    width: 100vw;
+    display: grid;
+    height: 70vh;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    padding-top: 8%;
+    padding-left: 12%;
+    padding-right: 10%;
+    gap: 20px;
+
+}
+
+.service-one {
+
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  margin-left: 130px;
+  border-radius: 6px;
+  border: 1px solid #e0d7d7;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.7s;
+  box-shadow: 2px 2px 12px rgb(216, 208, 208);
+}
+.service-one:hover{
+    border: 1px solid #f16661;
+    background-color: #f16661;
+    color: white;
+    box-shadow: 2px 2px 12px rgb(160, 110, 110);
+}
+.service-one p{
+    padding-top: 18%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.service-two {
+ 
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #e0d7d7;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.7s;
+  box-shadow: 2px 2px 12px rgb(216, 208, 208);
+}
+.service-two:hover{
+    border: 1px solid #f16661;
+    background-color: #f16661;
+    color: white;
+    box-shadow: 2px 2px 12px rgb(160, 110, 110);
+}
+.service-two p{
+    padding-top: 18%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.service-three {
+
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  margin-right: 290px;
+  border-radius: 6px;
+  border: 1px solid #e0d7d7;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.7s;
+  box-shadow: 2px 2px 12px rgb(216, 208, 208);
+}
+.service-three:hover{
+    border: 1px solid #f16661;
+    background-color: #f16661;
+    color: white;
+    box-shadow: 2px 2px 12px rgb(160, 110, 110);
+}
+.service-three p{
+    padding-top: 24%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.service-four {
+
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  margin-left: 130px;
+  border-radius: 6px;
+  border: 1px solid #e0d7d7;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.7s;
+  box-shadow: 2px 2px 12px rgb(216, 208, 208);
+}
+.service-four:hover{
+    border: 1px solid #f16661;
+    background-color: #f16661;
+    color: white;
+    box-shadow: 2px 2px 12px rgb(160, 110, 110);
+}
+.service-four p{
+    padding-top: 24%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.service-five {
+
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #e0d7d7;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.7s;
+  box-shadow: 2px 2px 12px rgb(216, 208, 208);
+}
+.service-five:hover{
+    border: 1px solid #f16661;
+    background-color: #f16661;
+    color: white;
+    box-shadow: 2px 2px 12px rgb(160, 110, 110);
+}
+.service-five p{
+    padding-top: 24%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.service-six {
+
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #e0d7d7;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.7s;
+  box-shadow: 2px 2px 12px rgb(216, 208, 208);
+}
+.service-six:hover{
+    border: 1px solid #f16661;
+    background-color: #f16661;
+    color: white;
+    box-shadow: 2px 2px 12px rgb(160, 110, 110);
+}
+.service-six p{
+    padding-top: 24%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.service-seven {
+    
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  margin-left: 130px;
+  border-radius: 6px;
+  border: 1px solid #e0d7d7;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.7s;
+  box-shadow: 2px 2px 12px rgb(216, 208, 208);
+}
+.service-seven:hover{
+    border: 1px solid #f16661;
+    background-color: #f16661;
+    color: white;
+    box-shadow: 2px 2px 12px rgb(160, 110, 110);
+}
+.service-seven p{
+    padding-top: 24%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.service-eight {
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #e0d7d7;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.7s;
+  box-shadow: 2px 2px 12px rgb(216, 208, 208);
+}
+.service-eight:hover{
+    border: 1px solid #f16661;
+    background-color: #f16661;
+    color: white;
+    box-shadow: 2px 2px 12px rgb(160, 110, 110);
+}
+.service-eight p{
+    padding-top: 24%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.service-nine {
+  height: 100px;
+  width: 150px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #e0d7d7;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.7s;
+  box-shadow: 2px 2px 12px rgb(216, 208, 208);
+}
+.service-nine:hover{
+    border: 1px solid #f16661;
+    background-color: #f16661;
+    color: white;
+    box-shadow: 2px 2px 12px rgb(160, 110, 110);
+}
+.service-nine p{
+    padding-top: 24%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.portfolio{
+    width: 100vw;
+    height: 100%;
+    background-image: repeating-linear-gradient(45deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 10px, transparent 10px, transparent 11px), repeating-linear-gradient(135deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 10px, transparent 10px, transparent 11px), linear-gradient(90deg, hsl(256, 7%, 84%), hsl(256, 7%, 84%));
+    overflow-y: hidden;
+}
+
+/* slider imported css  */
+.mySlides {display: none;  background-color: #bbb;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+ 
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.portfolio-h1{
+    margin: 5%;
+    font-family: 'Rubik Maze', cursive;
+    color: rgb(232, 59, 59);
+    font-size: 36px;
+    padding-top: 1%;
+}
+.porti-link{
+    padding: 10px 15px 10px 15px;
+    background-color: #001cab;
+    border: 1px solid #001cab;
+    color: aliceblue;
+    border-radius: 6px;
+}
+.porti-link a {
+    color: white;
+    text-decoration: none;
+}
+.contact{
+    width: 100vw;
+    height: 100vh;
+     overflow-y: hidden;
+     margin-bottom: 10%;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 25%;
+    justify-content: center;
+    position: absolute;
+    padding-bottom: 2%;
+}
+.contact form label{
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+.contact form input{
+    border-color: #f9eaea;
+    padding: 12px ;
+    border-radius: 12px;
+    transition: all .5s;
+}
+.contact form input:hover{
+    background-color: #eeb6b4;
+}
+.contact form input:focus{
+    background-color: #ea7a76;
+    outline: none !important;
+    border-color: #719ece00;
+}
+.contact form input::placeholder{
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+}
+.contact form textarea{
+    border-color: #f9eaea;
+    padding-top: 12px ;
+    padding-left: 12px ;
+    border-radius: 12px;
+    margin-bottom: 2%;
+    transition: all .5s;
+}
+.contact form textarea:hover{
+    background-color: #eeb6b4;
+}
+.contact form textarea:focus{
+    background-color: #ea7a76;
+    outline: none !important;
+    border-color: #719ece00;
+}
+.contact form textarea::placeholder{
+    color: #000000;
+    font-family: 'Quicksand', sans-serif;
+}
+.contact form button{
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    width: 80%;
+    font-size: 18px;
+    padding: 5px 16px 5px 16px;
+    margin-left: 10%;
+    background-color: transparent;
+    border: 0.1px solid #ded1d1;
+    border-radius: 12px;
+    transition: all .5s;
+    box-shadow: 2px 2px 2px  #bda5a5;
+
+}
+.contact form button:hover{
+    background-color: rgb(232, 59, 59);
+    color: white;
+    border: 0.1px solid rgb(232, 59, 59);
+}
+footer{
+    width: 100vw;
+    height: 50vh;
+    background-image: radial-gradient(circle 5px at top left, rgba(226, 226, 226,0.1) 0%, rgba(226, 226, 226,0.1) 50%,rgba(201, 201, 201,0.1) 50%, rgba(201, 201, 201,0.1) 30%,transparent 30%, transparent 50%),linear-gradient(90deg, rgb(51,51,51),rgb(51,51,51)); background-size: 11px 11px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow-y: hidden;
+    font-family: 'Quicksand', sans-serif;
+}
+.main-one{
+    padding-top: 2%;
+}
+/* .main-one li:nth-child(1){
+  
+} */
+.main-one li {
+  
+   text-decoration: none;
+    margin-bottom: 17%;
+    font-size: large;
+}
+.main-one li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    transition: all 1s;
+}
+.main-one li a:hover{
+    text-decoration: underline;
+    color: #f16661;
+}
+.main-two{
+    padding-top: 2%;
+    color: #f2f2f2;
+}
+.main-two li:nth-child(1){
+    font-size: large;
+    background-color: #e51e1e;
+    padding: 5px 10px 5px 10px;
+}
+.main-two li{
+    margin-bottom: 12%;
+    font-size: medium;
+}
+.main-three{
+    padding-top: 2%;
+    color: #f2f2f2;
+}
+.main-three li:nth-child(1){
+    font-size: large;
+    background-color: #e51e1e;
+    padding: 5px 10px 5px 10px;
+}
+.main-three li{
+    margin-bottom: 12%;
+    font-size: medium;
+}
+.main-four {
+    padding-top: 2%;
+    color: #f2f2f2;
+}
+.main-four li:nth-child(1){
+    font-size: large;
+    background-color: #e51e1e;
+    padding: 5px 10px 5px 10px;
+}
+.main-four li{
+    margin-bottom: 12%;
+    font-size: medium;
+}
+.main-four li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    transition: all 1s;
+}
+.main-four li a:hover{
+    color: #f16661;
+    text-decoration: underline;
+}
+.copyrights{
+    font-family: 'Quicksand', sans-serif;
+    margin-top: -20px;
+    color: #e51e1e;
+}
+    </style>
+</head>
+
+<body>
+    <!--home code starts here-->
+    <div class="home" id="home">
+        <header>
+            <nav>
+                <ul>
+                    <li><img src="assets/logo.png" alt="logo" width="20%" height="80%"></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header ends here -->
+        <div class="home-main">
+            <div class="home-left">
+                <h1>Hello damn Dev(il)s!</h1>
+                <h5>&#9889;I'm Nithish Thiruchelvam</h5>
+                <h2>WEB-DEVEPOLER</h2>
+                <p>I'm Design minded web-developer based in sivaganga <br>
+                    and I create custom websites for do buisness Better
+                </p>
+                <button><a href="assets/NithishKumar_InternshalaResume.pdf" download>Download-Resume</a> </button>
+            </div>
+            <div class="home-right">
+                <img src="assets/man].png" alt="man" width="80%" height="90%">
+            </div>
+        </div>
+        <!-- <center>
+            <p class="animate__animated animate__bounce" id="scroll">scroll down</p>
+        </center> -->
+    </div>
+    <!-- home code ends here -->
+    <!-- services starts here -->
+    <div class="services" id="services">
+        <center>
+            <h1>FocusOn Quality & Cost-Effective solutions &#9818;</h1>
+        </center>
+        <div class="service-wrapper">
+            <div class="service-one">
+                <p>web-development</p>
+            </div>
+            <div class="service-two">
+                <p>app-development</p>
+            </div>
+            <div class="service-three">
+                <p>content-writing</p>
+            </div>
+            <div class="service-four">
+                <p>Ui&Ux</p>
+            </div>
+            <div class="service-five">
+                <p>full-stack-dev</p>
+            </div>
+            <div class="service-six">
+                <p>Branding</p>
+            </div>
+            <div class="service-seven">
+               <p> Animation</p>
+            </div>
+            <div class="service-eight">
+                <p>Consultant</p>
+            </div>
+            <div class="service-nine">
+               <p> 3D-modeling</p>
+            </div>
+        </div>
+    </div>
+    <!-- services ends here -->
+    <!-- portfolio starts here -->
+    <div class="portfolio" id="portfolio">
+        <center>
+            <h1 class="portfolio-h1">Tactical miracles of mine</h1>
+        </center>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="assets/img1.png" style="width:100%">
+              <div class="text"><button class="porti-link"><a href="#">Here is the link</a></button></div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="assets/img2.png" style="width:100%">
+              <div class="text"><button class="porti-link"><a href="#">Here is the link</a></button></div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="assets/img3.png" style="width:100%">
+              <div class="text"><button class="porti-link"><a href="#">Here is the link</a></button></div>
+            </div>
+             
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+    </div>
+    <!-- portfolio ends here -->
+    <!-- contact starts here -->
+    <div class="contact" id="contact">
+        <center>
+            <h1 class="portfolio-h1">Get-in touch with me</h1>
+        </center>
+         <form>
+            <label for="Name">name : </label>
+            <input type="text" id="Name" placeholder="enter your name">            
+        
+            <label for="Name">email : </label>
+            <input type="email" id="Name" placeholder="enter your email"> 
+
+            <label for="Name">message : </label>
+            <textarea  id="textarea" cols="30" rows="10" placeholder="your thoughts here.."></textarea>
+            <button>send message</button>
+        </form>
+    </div>
+    <!-- contact ends here -->
+    <!-- footer starts here -->
+    <footer>
+          <ul class="main-one">
+            <li><img src="assets/logo.png" alt="logo" width="60%"></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <ul class="main-two">
+            <li>Services Provide</li>
+            <li>Web-Development</li>
+            <li>App-Development</li>
+            <li>Animation</li>
+            <li>Branding</li>
+            <li>Content-writing</li>
+          </ul>
+          <ul class="main-three">
+            <li>Find me on</li>
+            <li>Sivaganga</li>
+            <li>Tamil-nadu</li>
+            <li>India..</li>
+          </ul>
+          <ul class="main-four">
+            <li>Follow me on</li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="linkedin.com/in/fullstackdevnithishatum">Linkedin</a></li>
+            <li><a href="https://www.behance.net/rajaraj20">Behance</a></li>
+            <li><a href="mailto:nithishthirucelvam007@gmail.com">Email</a></li>
+            <li><a href="https://github.com/NickAtumJunior">Github</a></li>
+          </ul>
+    </footer>
+    <center class="copyrights">copyrights@DesignFreaker-2022</center>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+</body>
+
+</html>
